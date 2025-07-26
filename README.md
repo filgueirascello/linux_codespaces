@@ -39,8 +39,42 @@ Cada usuário possui um subdiretório dentro de `/home`, por exemplo: `/home/joa
 
 ---
 
-## Conclusão
+# Permissões no Linux (Resumo)
 
-A estrutura de diretórios do Linux é padronizada e facilita a administração do sistema. O uso adequado do `/home` ajuda a manter os dados dos usuários seguros, organizados e independentes do restante do sistema.
+## 🧩 Conceito
+
+No Linux, cada arquivo e diretório tem permissões que controlam quem pode **ler**, **escrever** ou **executar**.
+
+As permissões são divididas em 3 grupos:
+
+1. **Usuário (owner)**
+2. **Grupo (group)**
+3. **Outros (others)**
+
+---
+
+## 🔢 Permissões no modo numérico
+
+Cada tipo de permissão tem um valor:
+
+| Permissão | Letra | Valor |
+|-----------|--------|--------|
+| Leitura   | `r`    | 4      |
+| Escrita   | `w`    | 2      |
+| Execução  | `x`    | 1      |
+
+Você soma os valores para definir as permissões:
+
+- `rwx` = 4 + 2 + 1 = **7**
+- `rw-` = 4 + 2 = **6**
+- `r--` = 4
+- `---` = 0
+
+### Exemplo:
+
+```bash
+chmod 755 arquivo.sh
+
+
 
 
